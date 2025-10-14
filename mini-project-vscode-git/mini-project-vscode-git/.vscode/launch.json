@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: smoke_test",
+      "type": "python",
+      "request": "launch",
+      "module": "project.scripts.smoke_test",
+      "console": "integratedTerminal"
+    }
+  ]
+}

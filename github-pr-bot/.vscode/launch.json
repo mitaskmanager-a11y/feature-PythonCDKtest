@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PR Bot: list",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "list"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "PR Bot: comment",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "comment",
+        "--pr",
+        "2",
+        "--body",
+        "\u2705 Lint passed. Ready to merge."
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "PR Bot: label add",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "label",
+        "--pr",
+        "2",
+        "--add",
+        "AWS Glue",
+        "--add",
+        "ETL"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "PR Bot: merge squash",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "merge",
+        "--pr",
+        "2",
+        "--method",
+        "squash",
+        "--title",
+        "Automated merge"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}

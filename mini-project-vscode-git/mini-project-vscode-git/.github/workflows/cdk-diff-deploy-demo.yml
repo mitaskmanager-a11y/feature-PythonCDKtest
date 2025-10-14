@@ -1,0 +1,23 @@
+name: BMO CDK Diff/Deploy workflow (demo)
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ main, development ]
+jobs:
+  diff-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: CI Diff (demo)
+        run: |
+          echo "Running compliance scan (demo) - no policy violations"
+          echo "CDK diff (demo) - no changes"
+      - name: CDK Deploy (demo)
+        run: |
+          echo "Deploying to /cdk:sandboxx1,ca1 (demo)"
+          echo "Total Execution Time: 2m49s (demo)"
