@@ -1,4 +1,4 @@
-cat << 'EOF' > ~/airflow_project/dags/incremental_stored_proc.py
+cat << 'EXIT' > ~/airflow_project/dags/incremental_stored_proc.py
 import time
 from datetime import datetime, timedelta
 from airflow import DAG
@@ -39,4 +39,4 @@ with DAG(
         python_callable=execute_incremental_loop,
         op_kwargs={"iterations": 6, "interval_seconds": 10},
     )
-EOF
+EXIT
